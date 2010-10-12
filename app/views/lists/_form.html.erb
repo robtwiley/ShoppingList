@@ -27,17 +27,22 @@
 	  <th>Size</th>
 	  <th>Remove?</th>
 	</tr>
-    <% f.fields_for :list_items do |lister| %>
-      <tr>
+    <%= f.fields_for :list_items do |lister| %>
+      <tr class="fields">
 	    <td><%= lister.text_field :list_item_name %></td>
 		<td><%= lister.text_field :list_item_brand %></td>
 		<td><%= lister.text_field :list_item_size %></td>
-		<td><%= lister.check_box :_destroy %></td>
+		<%# Calls helpers\application_helper function to remove list_items %>
+		<td><%= lister.hidden_field :_destroy %>
+		     <%= link_to_remove_fields "Remove", lister %></td>
 	  </tr>
 	<% end %>
+    <%= link_to_add_fields "Add New Item", f, :list_items %>
    </table>
    
-  <div class="actions">
+   
+   
+   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>

@@ -1,8 +1,37 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
-
   <!-- Begin
+  
+  	//Used to remove fields from a nested form
+	//See http://media.railscasts.com/videos/197_nested_model_form_part_2.mov
+    function remove_fields (link) {
+	  //Sets hidden field for _destroy value to 1 (i.e. true) to indicate to remove fields
+	  //when submit button is clicked.
+	  $(link).previous("input[type=hidden]").value = "1";
+	  //Navigates up DOM tree to first tag with class 'fields' and hides them
+	  $(link).up(".fields").hide()
+	}
+	
+	//Used to add fields to a nested form
+	//See http://media.railscasts.com/videos/197_nested_model_form_part_2.mov
+	function add_fields(link, association, content) {
+        var new_id = new Date().getTime();
+        var regexp = new RegExp("new_" + association, "g")
+        $(link).up().insert({
+           before: content.replace(regexp, new_id)
+         });
+     }
 
+/* JQuery Versions 	 
+	function remove_fields(link) {  
+        $(link).prev("input[type=hidden]").val("1");  
+        $(link).closest(".fields").hide();  
+    }  
+      
+    function add_fields(link, association, content) {  
+        var new_id = new Date().getTime();  
+        var regexp = new RegExp("new_" + association, "g");  
+        $(link).parent().before(content.replace(regexp, new_id));  
+    }  
+*/
 	function about() {
         confirm("Advertisers, calculations and/or links at this Web site are for general information purposes only.  It is the sole responsibility of any person viewing these pages to verify by outside means the accuracy of the information prior to taking any action based on the content of this web site and any web site linked to it. All of the information provided here, while considered reliable, is not guaranteed by this organization or this organization's agents.  Independent verification is always recommended. When in doubt, consult with the necessary professional.");
 		return false;
