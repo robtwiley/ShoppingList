@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>List name:</b>
+  <%= @list.list_name %>
+</p>
+
+<p>
+  <b>List description:</b>
+  <%= @list.list_description %>
+</p>
+
+<% if @list.list_items %>
+  <table>
+    <tr>
+      <th>Item</th>
+	  <th>Brand</th>
+	  <th>Size</th>
+	</tr>
+    <% for list_item in @list.list_items %>
+      <tr>
+	    <td><%= list_item.list_item_name %></td>
+		<td><%= list_item.list_item_brand %></td>
+		<td><%= list_item.list_item_size %></td>
+	  </tr>
+    <% end %>
+  </table>
+<% end %>
+
+<%= link_to 'Edit', edit_list_path(@list) %> |
+<%= link_to 'Back', lists_path %>

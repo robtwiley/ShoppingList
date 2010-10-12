@@ -1,0 +1,43 @@
+<%= form_for(@list) do |f| %>
+  <% if @list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@list.errors.count, "error") %> prohibited this list from being saved:</h2>
+
+      <ul>
+      <% @list.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :list_name %><br />
+    <%= f.text_field :list_name %>
+  </div>
+  <div class="field">
+    <%= f.label :list_description %><br />
+    <%= f.text_field :list_description %>
+  </div>
+  
+  <table>
+    <tr>
+      <th>Item</th>
+	  <th>Brand</th>
+	  <th>Size</th>
+	  <th>Remove?</th>
+	</tr>
+    <% f.fields_for :list_items do |lister| %>
+      <tr>
+	    <td><%= lister.text_field :list_item_name %></td>
+		<td><%= lister.text_field :list_item_brand %></td>
+		<td><%= lister.text_field :list_item_size %></td>
+		<td><%= lister.check_box :_destroy %></td>
+	  </tr>
+	<% end %>
+   </table>
+   
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

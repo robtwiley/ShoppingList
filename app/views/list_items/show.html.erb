@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>List item name:</b>
+  <%= @list_item.list_item_name %>
+</p>
+
+<p>
+  <b>List item brand:</b>
+  <%= @list_item.list_item_brand %>
+</p>
+
+<p>
+  <b>List item size:</b>
+  <%= @list_item.list_item_size %>
+</p>
+
+<p>
+  <b>List:</b>
+  <%= @list_item.list_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_list_item_path(@list_item) %> |
+<%= link_to 'Back', list_items_path %>

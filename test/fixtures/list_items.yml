@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  list_item_name: MyString
+  list_item_brand: MyString
+  list_item_size: MyString
+  list_id: 1
+
+two:
+  list_item_name: MyString
+  list_item_brand: MyString
+  list_item_size: MyString
+  list_id: 1

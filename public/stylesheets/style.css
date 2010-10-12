@@ -1,0 +1,101 @@
+html, body {
+   margin:0px;
+   padding:0px;
+   font:16px Tahoma, Helvetica, serif;
+   color:#595959;
+   background:#ffffff;
+}
+
+h4 {
+	text-decoration:underline;
+}
+
+a:link, a:visited, a:active {
+   color: #0000c0;
+}
+
+a:hover {
+   color: #C0C0C0;
+}
+
+img {
+
+   border: 0px;
+}
+/* ++++++++ Global general styles end +++++++++++++ */
+
+/* ++++++++ Global structure styles start -- Assign styles to custom tags that impact global envelope of site  +++++++++++++ */
+
+#outer-body {
+   text-align:left;
+   border:2px solid #969696;
+   width:1024px;
+   height:768px; 
+   background: #ffffa0 url(../images/aisle1024x768.jpg) no-repeat;
+   background-position:center;
+   border:2px solid #969696;
+}
+
+#outer-body-bottom-center {
+   position:relative;
+   top:80px;
+   font-size:9px;
+   text-align:center;
+   width:1024px;
+   color: #bebebe;
+}
+
+/* ++++++++ Global structure styles end +++++++++++++ */
+
+/* ++++++++ Custom styles start -- Assign styles to more specific tabs nested within global structures +++++++++++++ */
+
+#menu-bar {
+   position: relative;
+   left:10px;
+   top:25px;
+   width:97%;
+   padding-left:5px;
+   padding-bottom:2px;
+   vertical-align:middle;
+   font-weight:bold;
+   font-size:25px;
+   /* for IE */
+   background: #bebebe;
+   border:2px solid #969696;
+   /* for IE */
+   filter:alpha(opacity=85);
+   /* CSS3 standard */
+   opacity:0.85;
+}
+
+#menu-item {
+   position:relative;
+   margin-left:35px;
+   z-index: 101;
+}
+
+#shopping-list-box {
+   position: relative;
+   left:10px;
+   width:97%;
+   /* height:75%; */
+   top:65px;
+   border:2px solid #969696;
+   background: #ffffa0;
+   padding-left:5px;
+   padding-bottom:5px;
+   /* for IE */
+   filter:alpha(opacity=85);
+   /* CSS3 standard */
+   opacity:0.85;
+ }
+ 
+ #list_item {
+	position: relative;
+	left: 5px;
+ }
+
+
+/*----- Box End -----*/
+
+/* ++++++++ Custom styles end +++++++++++++ */
