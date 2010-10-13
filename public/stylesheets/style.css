@@ -74,6 +74,14 @@ img {
    z-index: 101;
 }
 
+#user_nav {
+   position:relative;
+   float:right;
+   font-size:12px;
+   margin-right: 15px;
+   margin-top:5px;
+}
+
 #shopping-list-box {
    position: relative;
    left:10px;
@@ -88,6 +96,7 @@ img {
    filter:alpha(opacity=85);
    /* CSS3 standard */
    opacity:0.85;
+   z-index: 101;
  }
  
  #list_item {

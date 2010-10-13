@@ -1,0 +1,9 @@
+<h1>Welcome to Shopping List!</h1>
+<p>
+  The premier site in managing all your shopping lists!  Create and store
+  shopping lists for your groceries, visits to the hardware store or anywhere<br />
+  else.  
+  <% if !current_user %>
+    Interested? <%= link_to "Login", login_path %> or <%= link_to "Register", new_user_path %> for a new account.
+  <% end %>
+</p>
