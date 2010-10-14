@@ -1,5 +1,4 @@
   <!-- Begin
-  
   	//Used to remove fields from a nested form
 	//See http://media.railscasts.com/videos/197_nested_model_form_part_2.mov
     function remove_fields (link) {
@@ -7,7 +6,7 @@
 	  //when submit button is clicked.
 	  $(link).previous("input[type=hidden]").value = "1";
 	  //Navigates up DOM tree to first tag with class 'fields' and hides them
-	  $(link).up(".fields").hide()
+	  $(link).up(".fields").hide();
 	}
 	
 	//Used to add fields to a nested form
@@ -19,8 +18,8 @@
            before: content.replace(regexp, new_id)
          });
      }
-
-/* JQuery Versions 	 
+	 
+/*  JQuery Versions 	 
 	function remove_fields(link) {  
         $(link).prev("input[type=hidden]").val("1");  
         $(link).closest(".fields").hide();  
