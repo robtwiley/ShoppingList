@@ -4,6 +4,8 @@
   shopping lists for your groceries, visits to the hardware store or anywhere<br />
   else.  
   <% if !current_user %>
-    Interested? <%= link_to "Login", login_path %> or <%= link_to "Register", new_user_path %> for a new account.
+    Interested? <%= link_to "Login", login_path %> or <%= link_to "Register", new_user_path %> for a new account. %>
+  <% else %>
+    See your <%= link_to "current lists!", lists_url %>
   <% end %>
 </p>

@@ -20,7 +20,7 @@
     <%= f.text_field :list_description %>
   </div>
   
-  <table>
+  <table class="fields_tbl">
     <tr>
       <th>Item</th>
 	  <th>Brand</th>
@@ -37,7 +37,7 @@
 		     <%= link_to_remove_fields "Remove", lister %></td>
 	  </tr>
 	<% end %>
-    <%= link_to_add_fields "Add New Item", f, :list_items %>
+	<tr class="fields"><td><%= link_to_add_fields "Add New Item", f, :list_items %><td></tr>
    </table>
    
    

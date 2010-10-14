@@ -25,7 +25,7 @@ class ListsController < ApplicationController
   # GET /lists/new.xml
   def new
     @list = List.new
-	3.times { @list.list_items.build }
+	#3.times { @list.list_items.build } #automatically puts 3 empty fields on the list
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,7 +36,7 @@ class ListsController < ApplicationController
   # GET /lists/1/edit
   def edit
     @list = List.find(params[:id])
-	3.times { @list.list_items.build }
+	#3.times { @list.list_items.build } #automatically puts 3 empty fields on the list
   end
 
   # POST /lists
