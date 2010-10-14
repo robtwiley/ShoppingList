@@ -21,10 +21,15 @@
 		user			test		 User
 
 == Yet to do:
-	1) 
+	1) Add declarative authorization
+	2) Set up functionality for each user to see only their lists
+	3) Create unit and functional tests
+	4) Add model for brand names
+	5) Add model for list item categories to allow categorization of list items
+	6) Use auto complete to add Ajax functionality.
 
 == Questions:
-    1) 
+    1) ... 
 	
 
 
